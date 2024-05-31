@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Custo de Combustível</title>
+    <meta name="description" content="Calculadora gratuita para determinar se é mais vantajoso abastecer seu carro com etanol ou gasolina, baseada nos preços e eficiência do combustível.">
+    <meta name="keywords" content="calculadora de combustível, etanol vs gasolina, custo de combustível, eficiência de combustível, Brasil">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora álcool x gasolina</h1>
+            <p>Preencha os campos com os preços dos combustíveis e descubra qual é a melhor opção.</p>
+        </header>
+        <main>
+            <div class="calculator-container">
+                <div class="form-container">
+                    <label for="ethanol-price">Álcool (por litro):</label>
+                    <input type="number" id="ethanol-price" step="0.01" placeholder="R$0,00" required>
+                    
+                    <label for="gasoline-price">Gasolina (por litro):</label>
+                    <input type="number" id="gasoline-price" step="0.01" placeholder="R$0,00" required>
+                    
+                    <label for="ethanol-efficiency">Eficiência do Etanol (km/l):</label>
+                    <input type="number" id="ethanol-efficiency" value="7" disabled>
+                    
+                    <label for="gasoline-efficiency">Eficiência da Gasolina (km/l):</label>
+                    <input type="number" id="gasoline-efficiency" value="10" disabled>
+                    
+                    <button onclick="calculate()">Calcular</button>
+                </div>
+                <div id="result"></div>
+            </div>
+            <div class="info-section">
+                <p>
+                    Os valores de eficiência de 7 km/l para etanol e 10 km/l para gasolina foram predefinidos com base em dados de carros populares no Brasil. Estes valores médios oferecem uma base precisa para determinar a opção de combustível mais econômica.
+                </p>
+            </div>
+            <div class="data-section">
+                <h2>Dados Usados para Determinar a Eficiência Média (km/l)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Carro</th>
+                            <th>Eficiência com Etanol (km/l)</th>
+                            <th>Eficiência com Gasolina (km/l)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Volkswagen Gol</td>
+                            <td>6.5 - 7.5</td>
+                            <td>9 - 10</td>
+                        </tr>
+                        <tr>
+                            <td>Fiat Argo</td>
+                            <td>7.0 - 8.0</td>
+                            <td>9.5 - 11</td>
+                        </tr>
+                        <tr>
+                            <td>Chevrolet Onix</td>
+                            <td>6.5 - 7.5</td>
+                            <td>9.0 - 10.5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Calculadora de Custo de Combustível</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
