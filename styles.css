@@ -48,6 +48,12 @@ header p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.fuel-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 label {
     display: block;
     margin: 10px 0 5px;
